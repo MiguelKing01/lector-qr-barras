@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">lector-qr-barras</string>
+    <string name="title_activity_main">lector-qr-barras</string>
+    <string name="package_name">co.edu.ue.qrbarras</string>
+    <string name="custom_url_scheme">co.edu.ue.qrbarras</string>
+</resources>
