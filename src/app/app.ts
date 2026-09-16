@@ -1,7 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CapacitorBarcodeScanner } from '@capacitor/barcode-scanner';
-import { IonButton, IonContent, IonHeader, IonIcon, IonTitle, IonToolbar } from '@ionic/angular';
+import {IonApp,IonButton,IonContent,IonHeader,IonIcon,IonTitle,IonToolbar} from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { qrCodeOutline, scanOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,12 @@ import { IonButton, IonContent, IonHeader, IonIcon, IonTitle, IonToolbar } from 
 export class App {
 
   protected readonly title = signal('lector-qr-barras');
-
+  constructor() {
+  addIcons({
+    'qr-code-outline': qrCodeOutline,
+    'scan-outline': scanOutline
+  });
+}
   result: string = 'No has escaneado nada aun';
 
   escanear = async () => {
